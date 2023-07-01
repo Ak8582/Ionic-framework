@@ -1,0 +1,301 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Ionic Components </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header> Ion Buttons </ion-card-header>
+    <ion-card-content>
+      <ion-button> Default Button </ion-button>
+
+      <ion-button color="primary"> Primary Button </ion-button>
+
+      <ion-button color="secondary"> Secondary Button </ion-button>
+
+      <ion-button color="tertiary"> Tertiary Button </ion-button>
+
+      <ion-button expand="full"> Full-width Button </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header> Ion Action Sheet </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <!-- <ion-button (click)="setOpen(true)">Open</ion-button>
+        <ion-action-sheet
+          [isOpen]="isActionSheetOpen"
+          header="Actions"
+          [buttons]="actionSheetButtons"
+          (didDismiss)="setOpen(false)"
+        ></ion-action-sheet> -->
+        <ion-button (click)="presentActionSheet()">Open</ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header> Ion-Accordion </ion-card-header>
+    <ion-card-content>
+      <ion-accordion-group>
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label>First Accordion</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">First Content</div>
+        </ion-accordion>
+        <ion-accordion value="second">
+          <ion-item slot="header" color="light">
+            <ion-label>Second Accordion</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Second Content</div>
+        </ion-accordion>
+        <ion-accordion value="third">
+          <ion-item slot="header" color="light">
+            <ion-label>Third Accordion</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Third Content</div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header> Ion-Alert </ion-card-header>
+    <ion-card-content>
+      <ion-button id="present-alert">Click Me</ion-button>
+      <ion-alert
+        trigger="present-alert"
+        header="Alert"
+        subHeader="Important message"
+        message="This is an alert!"
+        [buttons]="alertButtons"
+      ></ion-alert>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>ion-badge</ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-badge slot="start">11</ion-badge>
+          <ion-label slot="end">Badge in start slot</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="end">22</ion-badge>
+          <ion-label slot="start">Badge in end slot</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>ion-breadcrumbs</ion-card-header>
+    <ion-card-content>
+      <ion-breadcrumbs>
+        <ion-breadcrumb href="#home">Home</ion-breadcrumb>
+        <ion-breadcrumb href="#electronics">Electronics</ion-breadcrumb>
+        <ion-breadcrumb href="#cameras">Cameras</ion-breadcrumb>
+        <ion-breadcrumb href="#film">Film</ion-breadcrumb>
+      </ion-breadcrumbs>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>ion-rippleeffect</ion-card-header>
+    <ion-card-content>
+      <div class="wrapper">
+        <b>Click on a shape to see the ripple</b>
+
+        <div class="ion-activatable ripple-parent rounded-rectangle">
+          Bounded
+          <ion-ripple-effect></ion-ripple-effect>
+        </div>
+
+        <div class="ion-activatable ripple-parent circle">
+          Unbounded
+          <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header> Ion Icons </ion-card-header>
+    <ion-card-content>
+      <ion-item><ion-icon slot="end" name="heart"></ion-icon>Heart</ion-item>
+      <ion-item><ion-icon slot="end" name="star"></ion-icon>Star</ion-item>
+      <ion-item><ion-icon slot="end" name="camera"></ion-icon>Camera</ion-item>
+      <ion-item
+        ><ion-icon slot="end" name="navigate"></ion-icon>Navigate</ion-item
+      >
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header> Ion-checkbox </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-checkbox labelPlacement="start" justify="start"
+            >Packed at the Start of Line</ion-checkbox
+          >
+        </ion-item>
+
+        <ion-item>
+          <ion-checkbox
+            labelPlacement="end"
+            [indeterminate]="true"
+            justify="end"
+            >Packed at the End of Line</ion-checkbox
+          >
+        </ion-item>
+
+        <ion-item>
+          <ion-checkbox labelPlacement="fixed" justify="space-between"
+            >Space Between Label and Control</ion-checkbox
+          >
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header> Ion Card </ion-card-header>
+    <ion-card-content>
+      <ion-card>
+        <ion-card-header> Card Header </ion-card-header>
+        <ion-card-content> This is a card content. </ion-card-content>
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Ion-datetime and Ion-datetime-button and ion-picker
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-datetime presentation="date"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-datetime presentation="time"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-datetime presentation="month-year"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-datetime
+          presentation="date-time"
+          [preferWheel]="true"
+        ></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-datetime [showDefaultTitle]="true"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-datetime-button datetime="datetime"></ion-datetime-button>
+        <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+            <ion-datetime id="datetime"></ion-datetime>
+          </ng-template>
+        </ion-modal>
+      </ion-item>
+      <ion-item>
+        <ion-button id="open-picker">Open</ion-button>
+        <ion-picker
+          trigger="open-picker"
+          [columns]="pickerColumns"
+          [buttons]="pickerButtons"
+        ></ion-picker>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header> Ion Chip </ion-card-header>
+    <ion-card-content>
+      <ion-chip>
+        <ion-avatar>
+          <img
+            alt="Silhouette of a person's head"
+            src="https://ionicframework.com/docs/img/demos/avatar.svg"
+          />
+        </ion-avatar>
+        <ion-label>Avatar Chip</ion-label>
+        <ion-icon name="close-circle"></ion-icon>
+      </ion-chip>
+
+      <ion-chip>
+        <ion-icon name="pin" color="primary"></ion-icon>
+        <ion-label>Icon Chip</ion-label>
+        <ion-icon name="close"></ion-icon>
+      </ion-chip>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header> Ion List </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label> Item 1 </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> Item 2 </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> Item 3 </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Ion-Toast</ion-card-header>
+    <ion-card-content>
+      <ion-button id="open-toast" expand="block">Open</ion-button>
+      <p id="message">
+        This toast example uses triggers to automatically open a toast when the
+        button is clicked.
+      </p>
+      <ion-toast
+        trigger="open-toast"
+        message="This toast will disappear after 5 seconds"
+        [duration]="5000"
+      ></ion-toast>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header> Ion Input </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Username</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header> Ion Grid </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6"> Column 1 </ion-col>
+          <ion-col size="6"> Column 2 </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card> </ion-card>
+</ion-content>
